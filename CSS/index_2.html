@@ -7,97 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
-    <style>
-        header{
-            color: red;
-        }
-        p{
-            color: rgb(104, 65, 177);
-        }
-        #my-header p{
-            color: greenyellow;
-        }
-        #test{
-            color: #505050;
-            font-family: "Bungee Spice", cursive, sans-serif;
-            font-size: 20px;
-            font-weight: 1000;
-            font-style: italic
-        }
-
-        #test-border{
-            /* 基本邊框 */
-            /* border-style: solid;
-            border-width: 5px;
-            border-color: red;
-            border-radius: 10px; */
-
-            /* 邊框縮寫語法 */
-            /* border: solid 5px red */
-
-            /* 四邊邊框 */
-            border-top: 1px solid red;
-            border-bottom: 5px solid green;
-            border-left: 3px dashed blue;
-            border-right: 2px dashed #000000;
-        }
-
-        #shadow-test{
-            /* test-shadow: 水平位移 垂直位移 陰影程度 顏色*/
-            text-shadow: 3px 5px 5px #32776c; 
-        }
-        /* ====== */
-        #box_1{
-            box-shadow: 3px 10px 10px;
-        }
-        #p1{
-            margin-top: 50px;
-            margin-bottom: 50px;
-        }
-        #px{
-            margin-bottom: 50px;
-        }
-        div{
-            width: 300px;
-            height: 300px;
-            border: 1px solid;
-        }
-        #margin_box_1{
-            margin-bottom: 100px;
-            margin-left: 100px;
-        }
-        #margin_box_2{
-            margin: 30px 30px 30px 30px;
-        }
-        /* ====== */
-        #float_test_1, #float_test_3{
-            clear: right;
-            float: left;
-        }
-        #float_test_2{
-            clear: left;
-            float: right;
-        }
-        #float_p_1{
-            font-size: 20px;
-        }
-        #float_p_2{
-            font-size: 20px;
-            clear: left;
-        }
-        #float_p_3{
-            font-size: 20px;
-            clear: right;
-        }
-        /* ====== */
-        #overflow_box{
-            width: 100;
-            height: 100;
-            font-size: 35px;
-            border: 1px solid;
-            overflow: scroll;
-        }
-    </style>
+    <link href="style_2.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <a href="../index.html">上一頁</a>
@@ -107,25 +17,24 @@
     </header>
     <p>建立另一個段落</p>
     <br>
-    <strong>=== CSS 的三種使用方式 ===</strong>
+
+    <h2>CSS 的三種使用方式</h2>
     <ul>
         <li>
-            <!-- 行內樣式 -->
             <strong>行內樣式 (Inline Styling)</strong>
             <p>直接在 p 後面加上 style="..."</p>
         </li>
         <li>
-            <!-- 內嵌樣式 -->
             <strong>內嵌樣式 (Embedded Styling)</strong>
             <p>在 head 裡加入 style...</p>
         </li>
         <li>
-            <!-- 外部樣式表 -->
             <strong>外部樣式表 (External Stylesheet)</strong>
             <p>在外部新增一個新的 .css</p>
         </li>
     </ul>
-    <strong>=== CSS 的顏色 ===</strong>
+
+    <h2>CSS 的顏色</h2>
     <ol>
         <li>
             <strong>內建顏色</strong>
@@ -147,7 +56,8 @@
             <p style="color: hsl(100, 75%, 40%)">color: rgb(R[數字], G[數字], B[數字])</p>
         </li>
     </ol>
-    <strong>=== CSS 字體 ===</strong>
+
+    <h2>CSS 字體</h2>
     <ul>
         <li>
             <strong>字體樣式(字體找不到會用第下一個)</strong>
@@ -171,7 +81,7 @@
         </li>
         <li><a href="https://fonts.google.com/">免費字型網站 Google Font</a></li>
     </ul>
-    <!-- 改用h1 h2 h3分類 -->
+
     <h2>邊框 border</h2>
         <h3>基本邊框</h3>
             <ul>
@@ -180,9 +90,11 @@
                 <li><p>border-color: 顏色;</p></li>
                 <li><p>border-radius: 大小(px);</p></li>
             </ul>
+        
         <h3>邊框縮寫語法</h3>
             <p>border: [類型] [大小] [顏色]</p>
             <p>border: solid 5px red</p>
+        
         <h3>四邊邊框</h3>
             <ul>
                 <li><p>border-top: 1px solid red;</p></li>
@@ -194,15 +106,18 @@
                     <p id="test-border">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus odit voluptatibus, id blanditiis ducimus, quibusdam reiciendis aspernatur explicabo architecto quasi, cumque necessitatibus optio? Totam ex porro consectetur, quos natus et?</p>
                 </li>
             </ul>
+    
     <h2 id="shadow-test">CSS陰影</h2>
         <strong>test-shadow: 水平位移 垂直位移 陰影程度 顏色</strong>
         <p id="box_1">第一個盒子</p>
         <p id="box_2">第二個盒子</p>
+    
     <h2>邊距 margin</h2>
         <p id="p1">段落一 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa rerum impedit ut iste nemo tempora, amet voluptatem nam quod vitae hic accusantium commodi ipsum nulla adipisci explicabo magnam libero ipsam.</p>
         <p id="p2">段落一 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa rerum impedit ut iste nemo tempora, amet voluptatem nam quod vitae hic accusantium commodi ipsum nulla adipisci explicabo magnam libero ipsam.</p>
         <div id="margin_box_1">box1</div>
         <div id="margin_box_2">box2</div>
+    
     <h2>浮動排版 float</h2>
         <img id="float_test_1" src="image/moinzon-mountains-1412683_640.png" alt="圖片:風景">
         <p id="float_p_1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati impedit, quae corrupti pariatur itaque soluta ipsa earum illo culpa nulla quam, possimus consequatur temporibus enim laudantium! Nobis minus fugit dolores?</p>
@@ -210,8 +125,9 @@
         <p id="float_p_2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati impedit, quae corrupti pariatur itaque soluta ipsa earum illo culpa nulla quam, possimus consequatur temporibus enim laudantium! Nobis minus fugit dolores?</p>
         <img id="float_test_3" src="image/moinzon-mountains-1412683_640.png" alt="圖片:風景">
         <p id="float_p_3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati impedit, quae corrupti pariatur itaque soluta ipsa earum illo culpa nulla quam, possimus consequatur temporibus enim laudantium! Nobis minus fugit dolores?</p>
+    
     <h2 style="clear: both;">溢出 overflow</h2>
-        <strong>溢出時的顯示類型</strong>
+        <h3>溢出時的顯示類型</h3>
         <ul>
             <li><p>visible: 全部可見</p></li>
             <li><p>hidden: 隱藏溢出部分</p></li>
@@ -219,6 +135,60 @@
             <li><p>scroll: 下拉式選單</p></li>
             <li><p>auto: 有溢出時，出現下拉式選單</p></li>
         </ul>
+
+        <h3>測試</h3>
         <div id="overflow_box">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident dicta enim exercitationem qui at, aut minima amet assumenda error porro animi nostrum vel. Dolore sapiente eum similique vel minima! Saepe?</div>
+    
+    <h2>display</h2>
+        <h3>用法</h3>
+        <strong style="color: rgb(21, 11, 65);">CSS內加入display來賦予新的屬性，以改變其原本特性</strong>
+        <ul>
+            <li><p>區塊元素 | display: block;</p></li>
+            <li><p>行內元素 | display: inline;</p></li>
+            <li><p>行內區塊元素(以inline的方式呈現，但同時擁有block的屬性) | display: inline;</p></li>
+        </ul>
+
+        <h3>測試</h3>
+        <div id="display_div">div (block區塊)</div>
+        <span id="display_span">span 1 (inline 區塊)</span>
+        <span id="display_span">span 2</span>
+        <span id="display_span">span 3</span>
+        <span id="display_span">span 4</span>
+        <span id="display_span">span 5</span>
+        <p id="display_p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque, distinctio earum fugit recusandae quis voluptatem accusantium placeat sunt dolore assumenda. Exercitationem magnam alias assumenda, sint culpa nesciunt! Odit, quisquam sit.</p>
+    
+    <h2>height 與 width</h2>
+    <h3>用法</h3>
+        <h4>width height</h4>
+        <ul>
+            <li><p>width (絕對/相對寬度)： 強制寬度。例如 width: 25% 代表永遠佔 1/4</p></li>
+            <li><p>min-width (最小寬度)： 這是「底線」。不管父容器多小，盒子都不能縮得比這個更小。當內容（如你設定的 80px 字體）太多時，min-width 能防止內容溢出崩壞。</p></li>
+            <li><p>max-width (最大寬度)： 這是「天花板」。不管父容器多大，盒子都不能長得比這個更大。這常用於防止圖片或段落在大螢幕上顯得過寬。</p></li>
+        </ul>
+
+        <h4>vh</h4>
+        <p>100vh (Viewport Height)： 代表「螢幕高度的 100%」</p>
+        <h4>box-sizing: border-box</h4>
+        
+        <h4>box-sizing: border-box</h4>
+        <ul>
+            <li><p>預設情況 (content-box)： 如果你設定寬度 25% 再加 3px 邊框，實際寬度會變成 25% + 6px，這會導致四個盒子加起來超過 100% 而掉下</p></li>
+            <li><p>使用 border-box： 寬度會包含邊框和內距。25% 就是整體的總寬，這讓計算排列變得超級簡單。</p></li>
+        </ul>
+    <h3>測試</h3>
+        <div class="container">
+            <div class="box">
+                Box 1
+            </div>
+            <div class="box">
+                Box 2
+            </div>
+            <div class="box">
+                Box 3
+            </div>
+            <div class="box">
+                Box 4
+            </div>
+        </div>
 </body>
 </html>
