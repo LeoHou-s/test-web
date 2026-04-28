@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 語法入門教學</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 全域重設與配色 */
+        :root {
+            --bg-color: #0f172a;        /* 深藍背景 */
+            --card-bg: #1e293b;        /* 區塊背景 */
+            --primary: #38bdf8;        /* 亮青色 */
+            --secondary: #c084fc;      /* 柔紫色 */
+            --text-main: #e2e8f0;      /* 主文字色 */
+            --text-muted: #94a3b8;     /* 次要文字色 */
+            --accent: #f43f5e;         /* 強調紅 */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Noto Sans TC', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        a { color: var(--primary); text-decoration: none; border-bottom: 1px solid transparent; transition: 0.3s; }
+        a:hover { border-bottom-color: var(--primary); }
+
+        /* 標題與段落 */
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 20px;
+            border-bottom: 2px solid var(--card-bg);
+        }
+
+        h1 { font-size: 2.5rem; color: var(--primary); margin-bottom: 10px; }
+        h2 { 
+            color: var(--secondary); 
+            border-left: 5px solid var(--secondary); 
+            padding-left: 15px; 
+            margin-top: 60px;
+            background: rgba(192, 132, 252, 0.1);
+        }
+        h3 { color: var(--primary); margin-top: 30px; }
+
+        p { color: var(--text-muted); }
+        strong { color: var(--text-main); }
+
+        /* 特殊樣式 */
+        #my-header p { color: #4ade80; font-weight: bold; } /* 綠色 */
+
+        #test {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            color: #cbd5e1;
+            font-family: "Bungee Spice", cursive;
+            font-size: 1.2rem;
+            line-height: 1.4;
+            font-style: italic;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* 邊框演示區 */
+        #test-border {
+            padding: 20px;
+            margin: 20px 0;
+            border-top: 2px solid var(--accent);
+            border-bottom: 5px solid #22c55e;
+            border-left: 4px dashed var(--primary);
+            border-right: 2px dashed #f59e0b;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        /* 陰影效果 */
+        #shadow-test {
+            text-shadow: 0px 4px 10px rgba(56, 189, 248, 0.6);
+            color: var(--primary);
+        }
+
+        #box_1 {
+            background: var(--card-bg);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        /* 邊距演示 */
+        div {
+            width: 200px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--card-bg);
+            border-radius: 8px;
+            border: 1px solid var(--primary);
+        }
+
+        #margin_box_1 { margin-bottom: 40px; margin-left: 50px; border-color: var(--accent); }
+        #margin_box_2 { margin: 30px; border-color: var(--secondary); }
+
+        /* 浮動排版優化 */
+        .float-section { overflow: hidden; margin-bottom: 40px; background: rgba(255,255,255,0.02); padding: 15px; border-radius: 10px; }
+        
+        img { width: 180px; border-radius: 10px; margin: 10px; transition: transform 0.3s; }
+        img:hover { transform: scale(1.05); }
+
+        #float_test_1, #float_test_3 { float: left; margin-right: 20px; }
+        #float_test_2 { float: right; margin-left: 20px; }
+        
+        .clear-fix { clear: both; }
+
+        /* 溢出控制 */
+        #overflow_box {
+            width: 100%;
+            height: 150px;
+            font-size: 1.2rem;
+            padding: 15px;
+            background: #000;
+            border: 1px solid var(--secondary);
+            overflow: scroll;
+            box-sizing: border-box;
+        }
+
+        /* 自定義捲軸 */
+        #overflow_box::-webkit-scrollbar { width: 8px; }
+        #overflow_box::-webkit-scrollbar-thumb { background: var(--secondary); border-radius: 10px; }
+
+    </style>
+</head>
+<body>
+
+    <a href="../index.html">← 返回首頁</a>
+
+    <header id="my-header">
+        <h1>CSS 視覺美學課</h1>
+        <p>探索網頁設計的色彩與佈局</p>
+    </header>
+
+    <section>
+        <h2>🎨 CSS 的使用方式</h2>
+        <ul>
+            <li><strong>行內樣式:</strong> 快速測試，權重最高。</li>
+            <li><strong>內嵌樣式:</strong> 單一頁面管理方便。</li>
+            <li><strong>外部樣式表:</strong> 專業開發的首選，結構清晰。</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>🌈 現代配色科學</h2>
+        <p>我們不再只用 <code>red</code>，而是精準控製色彩：</p>
+        <div style="width:100%; height: auto; border: none; background: transparent; display: block;">
+            <p style="color: #f43f5e">● Hex 16進制: #f43f5e (活力紅)</p>
+            <p style="color: rgb(56, 189, 248)">● RGB: rgb(56, 189, 248) (清涼藍)</p>
+            <p style="color: hsl(271, 91%, 71%)">● HSL: hsl(271, 91%, 71%) (粉紫色)</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>✍️ 字體藝術</h2>
+        <p id="test">這是結合了 Google Fonts 的特殊字體測試。Lorem ipsum dolor sit amet, consectetur elit.</p>
+    </section>
+
+    <section>
+        <h2>🖼️ 邊框與陰影</h2>
+        <h3 id="shadow-test">光影質感 (Text Shadow)</h3>
+        <p id="box_1">具有景深感的卡片 (Box Shadow)</p>
+        
+        <h3>邊框組合拳</h3>
+        <p id="test-border">透過不同的 border-side 屬性，我們可以創造出非對稱的美感。</p>
+    </section>
+
+    <section>
+        <h2>📏 空間與排列 (Margin & Float)</h2>
+        <div id="margin_box_1">區塊 A (Margin-Left)</div>
+        <div id="margin_box_2">區塊 B (Margin: 30px)</div>
+
+        <div class="float-section">
+            <img id="float_test_1" src="https://picsum.photos/200/150?random=1" alt="風景">
+            <p><strong>左浮動：</strong> 圖片向左靠，文字繞行。這是傳統報刊雜誌常見的排版方式。</p>
+        </div>
+
+        <div class="float-section">
+            <img id="float_test_2" src="https://picsum.photos/200/150?random=2" alt="風景">
+            <p style="text-align: right;"><strong>右浮動：</strong> 圖片向右靠。我們使用了 <code>clear: left</code> 來確保這段文字排版不受上方影響。</p>
+        </div>
+        
+        <div class="clear-fix"></div>
+    </section>
+
+    <section>
+        <h2>📦 溢出處理 (Overflow)</h2>
+        <p>當內容超出容器時，我們可以用捲軸優化體驗：</p>
+        <div id="overflow_box">
+            這是一個充滿文字的神秘盒子。捲軸被美化成了紫色。Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+            Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.
+        </div>
+    </section>
+
+    <footer style="margin-top: 100px; text-align: center; font-size: 0.8rem; color: var(--text-muted);">
+        &copy; 2026 CSS Coding Lab. Built with Passion.
+    </footer>
+
+</body>
+</html>

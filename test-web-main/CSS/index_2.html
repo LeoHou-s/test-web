@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+    <style>
+        header{
+            color: red;
+        }
+        p{
+            color: rgb(104, 65, 177);
+        }
+        #my-header p{
+            color: greenyellow;
+        }
+        #test{
+            color: #505050;
+            font-family: "Bungee Spice", cursive, sans-serif;
+            font-size: 20px;
+            font-weight: 1000;
+            font-style: italic
+        }
+
+        #test-border{
+            /* 基本邊框 */
+            /* border-style: solid;
+            border-width: 5px;
+            border-color: red;
+            border-radius: 10px; */
+
+            /* 邊框縮寫語法 */
+            /* border: solid 5px red */
+
+            /* 四邊邊框 */
+            border-top: 1px solid red;
+            border-bottom: 5px solid green;
+            border-left: 3px dashed blue;
+            border-right: 2px dashed #000000;
+        }
+
+        #shadow-test{
+            /* test-shadow: 水平位移 垂直位移 陰影程度 顏色*/
+            text-shadow: 3px 5px 5px #32776c; 
+        }
+        /* ====== */
+        #box_1{
+            box-shadow: 3px 10px 10px;
+        }
+        #p1{
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        #px{
+            margin-bottom: 50px;
+        }
+        div{
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+        }
+        #margin_box_1{
+            margin-bottom: 100px;
+            margin-left: 100px;
+        }
+        #margin_box_2{
+            margin: 30px 30px 30px 30px;
+        }
+        /* ====== */
+        #float_test_1, #float_test_3{
+            clear: right;
+            float: left;
+        }
+        #float_test_2{
+            clear: left;
+            float: right;
+        }
+        #float_p_1{
+            font-size: 20px;
+        }
+        #float_p_2{
+            font-size: 20px;
+            clear: left;
+        }
+        #float_p_3{
+            font-size: 20px;
+            clear: right;
+        }
+        /* ====== */
+        #overflow_box{
+            width: 100;
+            height: 100;
+            font-size: 35px;
+            border: 1px solid;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html">上一頁</a>
+    <header id="my-header">
+        <h1>CSS 語法入門</h1>
+        <p>這是一個段落</p>
+    </header>
+    <p>建立另一個段落</p>
+    <br>
+    <strong>=== CSS 的三種使用方式 ===</strong>
+    <ul>
+        <li>
+            <!-- 行內樣式 -->
+            <strong>行內樣式 (Inline Styling)</strong>
+            <p>直接在 p 後面加上 style="..."</p>
+        </li>
+        <li>
+            <!-- 內嵌樣式 -->
+            <strong>內嵌樣式 (Embedded Styling)</strong>
+            <p>在 head 裡加入 style...</p>
+        </li>
+        <li>
+            <!-- 外部樣式表 -->
+            <strong>外部樣式表 (External Stylesheet)</strong>
+            <p>在外部新增一個新的 .css</p>
+        </li>
+    </ul>
+    <strong>=== CSS 的顏色 ===</strong>
+    <ol>
+        <li>
+            <strong>內建顏色</strong>
+            <p style="color: red">color: red</p>
+        </li>
+        <li>
+            <strong>RGB 自訂顏色</strong>
+            <p style="color: rgb(180, 100, 100)">color: rgb(R[數字], G[數字], B[數字])</p>
+        </li>
+        <li>
+            <strong>16進制顏色</strong>
+            <p style="color: #ffffff; background-color: #000000">color: #六位數[0123456789abcdef]</p>
+        </li>
+        <li>
+            <strong>HSL</strong>
+            <p>H 色調</p>
+            <p>S 飽和度</p>
+            <p>L 亮度</p>
+            <p style="color: hsl(100, 75%, 40%)">color: rgb(R[數字], G[數字], B[數字])</p>
+        </li>
+    </ol>
+    <strong>=== CSS 字體 ===</strong>
+    <ul>
+        <li>
+            <strong>字體樣式(字體找不到會用第下一個)</strong>
+            <p>font-family: 字體1,字體2,字體3</p>
+        </li>
+        <li>
+            <strong>字體大小(pixel, em百分比)</strong>
+            <p>font-size: px</p>
+        </li>
+        <li>
+            <strong>字體粗細(normal:一般, bold:粗體, 數字)</strong>
+            <p>font-weight: [normal, blod, 100]</p>
+        </li>
+        <li>
+            <strong>字體效果(italic斜體)</strong>
+            <p>font-style: italic</p>
+        </li>
+        <li>
+            <Strong>Test</Strong>
+            <p id="test">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae possimus iste est voluptas ut tempore necessitatibus distinctio ipsam velit, aut officia, incidunt at unde omnis, ratione illo temporibus suscipit ipsa.</p>
+        </li>
+        <li><a href="https://fonts.google.com/">免費字型網站 Google Font</a></li>
+    </ul>
+    <!-- 改用h1 h2 h3分類 -->
+    <h2>邊框 border</h2>
+        <h3>基本邊框</h3>
+            <ul>
+                <li><p>border-style: 類型[solid, dot,...];</p></li>
+                <li><p>border-width: 大小(px);</p></li>
+                <li><p>border-color: 顏色;</p></li>
+                <li><p>border-radius: 大小(px);</p></li>
+            </ul>
+        <h3>邊框縮寫語法</h3>
+            <p>border: [類型] [大小] [顏色]</p>
+            <p>border: solid 5px red</p>
+        <h3>四邊邊框</h3>
+            <ul>
+                <li><p>border-top: 1px solid red;</p></li>
+                <li><p>border-bottom: 5px solid green;</p></li>
+                <li><p>border-left: 3px dashed blue;</p></li>
+                <li><p>border-right: 2px dashed #000000;</p></li>
+                <li>
+                    <p>Ex:</p>
+                    <p id="test-border">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus odit voluptatibus, id blanditiis ducimus, quibusdam reiciendis aspernatur explicabo architecto quasi, cumque necessitatibus optio? Totam ex porro consectetur, quos natus et?</p>
+                </li>
+            </ul>
+    <h2 id="shadow-test">CSS陰影</h2>
+        <strong>test-shadow: 水平位移 垂直位移 陰影程度 顏色</strong>
+        <p id="box_1">第一個盒子</p>
+        <p id="box_2">第二個盒子</p>
+    <h2>邊距 margin</h2>
+        <p id="p1">段落一 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa rerum impedit ut iste nemo tempora, amet voluptatem nam quod vitae hic accusantium commodi ipsum nulla adipisci explicabo magnam libero ipsam.</p>
+        <p id="p2">段落一 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa rerum impedit ut iste nemo tempora, amet voluptatem nam quod vitae hic accusantium commodi ipsum nulla adipisci explicabo magnam libero ipsam.</p>
+        <div id="margin_box_1">box1</div>
+        <div id="margin_box_2">box2</div>
+    <h2>浮動排版 float</h2>
+        <img id="float_test_1" src="image/moinzon-mountains-1412683_640.png" alt="圖片:風景">
+        <p id="float_p_1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati impedit, quae corrupti pariatur itaque soluta ipsa earum illo culpa nulla quam, possimus consequatur temporibus enim laudantium! Nobis minus fugit dolores?</p>
+        <img id="float_test_2" src="image/moinzon-mountains-1412683_640.png" alt="圖片:風景">
+        <p id="float_p_2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati impedit, quae corrupti pariatur itaque soluta ipsa earum illo culpa nulla quam, possimus consequatur temporibus enim laudantium! Nobis minus fugit dolores?</p>
+        <img id="float_test_3" src="image/moinzon-mountains-1412683_640.png" alt="圖片:風景">
+        <p id="float_p_3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati impedit, quae corrupti pariatur itaque soluta ipsa earum illo culpa nulla quam, possimus consequatur temporibus enim laudantium! Nobis minus fugit dolores?</p>
+    <h2 style="clear: both;">溢出 overflow</h2>
+        <strong>溢出時的顯示類型</strong>
+        <ul>
+            <li><p>visible: 全部可見</p></li>
+            <li><p>hidden: 隱藏溢出部分</p></li>
+            <li><p>clip: 隱藏溢出部分</p></li>
+            <li><p>scroll: 下拉式選單</p></li>
+            <li><p>auto: 有溢出時，出現下拉式選單</p></li>
+        </ul>
+        <div id="overflow_box">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident dicta enim exercitationem qui at, aut minima amet assumenda error porro animi nostrum vel. Dolore sapiente eum similique vel minima! Saepe?</div>
+</body>
+</html>
